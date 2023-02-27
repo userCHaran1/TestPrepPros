@@ -1,0 +1,477 @@
+img {
+  max-width:100%;
+}
+
+body {
+  font-family: Verdana;
+  background: linear-gradient(to right, #280463, #1300e8);
+  margin:0;
+  padding:0;
+}
+
+header, nav, main, footer, aside, article{
+   border-radius:5px;
+}
+
+header nav main footer aside{
+  border-radius:5px;
+}
+
+header {
+    grid-area:header;
+    background:#ab231b;
+    text-align:center;
+}
+.headerpic {
+  grid-area:headerpic;
+  padding:5px;
+  height:10vmax;
+}
+
+.headertext {
+ grid-area:headertext;
+ text-align:center;
+}
+
+.headerwrapper {
+  display:grid;
+  justify-items:center;
+  align-items:center;
+  grid-template-columns:25% 1fr;
+  grid-template-areas:
+  "headerpic headertext";
+}
+
+header h1 {
+     font-size:5vw;
+     color:#ffffff;
+     font-family:Impact;
+     text-shadow: 2px 2px 5px #3217ff;
+     margin: 0;
+}
+
+header h3 {
+    font-size:3vw;
+    color:#ffffff;
+    margin:0;
+}
+nav {
+    grid-area:nav;
+    background:#226324;
+    }
+
+nav li {
+    padding:10px 10px;
+    list-style-type:none;
+    font-size:1.5em;
+    font-weight:bold;
+}
+
+nav a {
+    text-decoration:none;
+    color:#ffffff;
+}
+nav a:hover {
+    text-shadow: 2px 2px 5px #3217ff;
+}
+
+main {
+    grid-area:main;
+    background:#A4C4FE;
+    color:#0000B0;
+    padding:5px;
+    }
+
+main h2 {
+    text-align:center;
+    margin:1%;
+}
+
+main p {
+    color:#000080;
+    padding:1% 2%;
+    font-size:1em;
+}
+
+main a {
+ color:navy;
+}
+
+footer {
+    grid-area:footer;
+    background:#400057;
+    padding:5px;
+    text-align:center;
+    }
+
+footer p {
+     font-size:1em;
+     color:#ffffff;
+     margin:0;
+}
+aside {
+  background-color:#ffdd03;
+  font-size:1.25em;
+  grid-area:aside;
+}
+
+aside h2 {
+  color:#0000b0;
+  text-align:center;
+}
+
+aside li {
+  color:#0000b0;
+  padding:10px 0;
+}
+article {
+  background-color:#0000b0;
+  color:#FFFFFF;
+  padding:1%;
+}
+article h2 {
+  text-align:center;
+}
+.top {
+  grid-area:top;
+  text-align:center;
+  padding:10px 0;
+}
+
+.middle {
+  grid-area:middle;
+  text-align:center;
+}
+
+.bottom {
+  grid-area:bottom;
+  text-align:center;
+}
+
+figure {
+  margin:0;
+  text-align:center;
+}
+
+figcaption {
+  padding:5px;
+  color:#0000b0;
+  font-weight:bold;
+}
+
+figure img {
+  margin-top:16px;
+  max-width:20em;
+  border: 2px solid #0000b0;
+}
+
+.fig1 {
+  grid-area:fig1;
+}
+
+.fig2 {
+  grid-area:fig2;
+  background-color:#ffffff;
+}
+
+section {
+  grid-area:section;
+}
+
+audio {
+ max-width: 100%;
+}
+
+video {
+  max-width:  100%;
+  height:auto;
+}
+
+.video, .audio {
+    margin:0;
+    display:grid;  /*This needs to be set or it won't center*/
+    justify-content:center;
+}
+
+form {
+    background-color:#FFA500;
+    width:90%;
+    margin:auto;
+    color:white;
+    padding:10px;
+}
+
+
+input {
+  margin: 1px 0 10px 0;
+}
+
+.call {
+    border-radius:5px;
+    text-align:center;
+    background-color:#0000b0;
+    width:60%;
+    padding: 5px;
+    margin:10px auto 0 auto;
+}
+ .call p{
+    color:#ffffff;
+    font-size:1.5em;
+    padding:0s;
+    margin:0;
+}
+
+.button {
+ padding:5px;
+ background-color:#a4c4fe;
+ text color:#0000b0;
+}
+
+/*----------------------------------Mobile Layout----------------------*/
+.container1 { /*tests.html contact.html*/
+  display: grid;
+  grid-template-columns:100%;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+    }
+    
+.container2 { /*for later*/
+  display: grid;
+  grid-template-columns:100%;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+    }
+    
+    .container3 { /*for later*/
+  display: grid;
+  grid-template-columns:100%;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "top"
+    "middle"
+    "bottom"
+    "footer";
+}
+
+.container4 { /*for about.html*/
+  display: grid;
+  grid-template-columns:100%;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "fig2"
+    "footer";
+    }
+    
+.nestedgrid {
+  display:grid;
+  grid-template-columns:100%;
+  grid-template-areas:
+  "section"
+  "fig1";
+}
+
+.nestedgrid2 {
+  display:grid;
+  grid-template-columns:100%;
+  grid-template-areas:
+  "header"
+  "nav"
+  "main"
+  "footer"
+}
+    
+/*This stuff is for the hamburger menu*/
+.toggleNav {
+    display:grid; /*This is what allows the hamburger icon and "Menu" to display*/
+    text-align:center;
+    font-size:1.5em;
+    font-weight:bold;
+    padding:10px;
+    }
+
+#flex-nav ul {
+    display: none; /*jQuery toggles the nav from to this class to the .open when clicked*/
+    text-align:center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+ 
+#flex-nav ul.open { /*.open is the class that gets toggled when clicked (with help from the jQuery code)*/
+    display:grid;
+    }
+    
+#flex-nav li {
+    padding-left:10px;
+    padding-top:10px;
+    }
+
+
+/*-----------------------Tablet Media Query------------------------*/
+@media only screen and (min-width: 480px)  {
+.container1 { /*tests.html contact.html*/
+  grid-template-columns:auto 1fr;
+  grid-template-areas:
+    "header header"
+    "nav aside"
+    "main main"
+    "footer footer";
+    }
+    
+.container2 { /*for later*/
+  display: grid;
+  grid-template-columns:auto 1fr;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header header"
+    "nav aside"
+    "main main"
+    "footer footer";
+    }
+    
+    .container3 { /*for blog.html*/
+  display: grid;
+  grid-template-columns:auto 1fr;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "top top"
+    "middle middle"
+    "bottom bottom"
+    "footer footer";
+}
+
+.container4 { /*for about.html*/
+  display: grid;
+  grid-template-columns:auto 1fr;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "fig2 fig2"
+    "footer footer";
+    }
+    
+.nestedgrid {
+  display:grid;
+  grid-template-columns:100%;
+  grid-template-areas:
+  "section"
+  "fig1";
+}
+
+
+.nestedgrid2 {
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-areas:
+  "div1"
+  "div2";
+}
+    
+
+/* Below will change from hamburger menu to side navigation*/
+  
+.toggleNav {
+    display: none; /*Makes the hamburger icon with the word "Menu" to disappear at this screen size*/
+  }
+  
+#flex-nav ul {
+    display:grid;
+    text-align:left;
+  }
+
+#flex-nav li {
+    padding-left:10px;
+    padding-top:10px;
+  }
+
+}
+
+/*-----------------------Desktop Media Query------------------------*/
+@media only screen and (min-width: 960px)  {
+
+.container1 { /*tests.html contact.html*/
+  grid-template-columns:auto 1fr;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "footer footer";
+    }
+
+
+.container2 { /*for later*/
+  display: grid;
+  grid-template-columns:auto 1fr 25%;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+    }
+
+
+.container3 { /*for blog.html*/
+  display: grid;
+  grid-template-columns:auto 1fr 1.5fr;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header header header"
+    "nav main top"
+    "nav main middle"
+    "nav main bottom"
+    "footer footer footer";
+}
+
+.container4 { /*for about.html*/
+  display: grid;
+  grid-template-columns:auto 1fr;
+  grid-gap:.5em;
+  margin:1%;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "fig2 fig2"
+    "footer footer";
+    }
+    
+.nestedgrid {
+  display:grid;
+  grid-template-columns:auto 1fr;
+  grid-template-areas:
+  "section fig1";
+}
+
+.nestedgrid2 {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-areas:
+  "div1 div2";
+}
+    
+}
